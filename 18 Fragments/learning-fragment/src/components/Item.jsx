@@ -1,6 +1,6 @@
 import styles from "./Item.module.css";
 
-const Item = ({ foodItems }) => {
+const Item = ({ foodItems,handleBuyButton }) => {
 
 const hendleBuyButtonClicked = (event)=>{
   console.log(event)
@@ -12,7 +12,7 @@ const hendleBuyButtonClicked = (event)=>{
       <samp className={styles["kg-spam"]}>{foodItems}</samp>
        <button 
        className={`${styles.button} btn btn-info`}
-       onClick={(event)=>hendleBuyButtonClicked(event)}
+       onClick={handleBuyButton}
        >
         Buy
        
